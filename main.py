@@ -43,8 +43,7 @@ regressor.compile(optimizer='adam', loss='mean_squared_error')
 # %%
 regressor.fit(x_train, y_train, epochs=100, batch_size=32)
 # %%
-dataset_test = pd.read_csv(
-    'E:\python\Deep_Learning_A_Z\Volume 1 - Supervised Deep Learning\Part 3 - Recurrent Neural Networks (RNN)\Section 12 - Building a RNN\Recurrent_Neural_Networks\Google_Stock_Price_Test.csv')
+dataset_test = pd.read_csv('./test.csv')
 test_set = dataset_test.iloc[:, 1:2].values
 dataset_total = pd.concat((dataset_train['Open'], dataset_test['Open']), axis=0)
 inputs = dataset_total[len(dataset_total) - len(dataset_test) - 60:].values
