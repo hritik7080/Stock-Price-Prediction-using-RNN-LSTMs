@@ -2,8 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-dataset_train = pd.read_csv(
-    'E:\python\Deep_Learning_A_Z\Volume 1 - Supervised Deep Learning\Part 3 - Recurrent Neural Networks (RNN)\Section 12 - Building a RNN\Recurrent_Neural_Networks\Google_Stock_Price_Train.csv')
+dataset_train = pd.read_csv('./data.csv')
 training_set = dataset_train.iloc[:, 1:2].values
 
 from sklearn.preprocessing import MinMaxScaler
